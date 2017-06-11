@@ -2,6 +2,15 @@ $primary-color: #d12e2e;
 $secondary-color: #2e2e2e;
 
 header{
+    .line{
+        position: absolute;
+        top: 90px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #fff;
+        z-index: 9;
+    }
     nav{
         @media screen and (max-width: 992px) {
             transform: translateX(0px);
