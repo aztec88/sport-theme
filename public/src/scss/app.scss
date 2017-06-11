@@ -1,0 +1,118 @@
+$primary-color: #d12e2e;
+$secondary-color: #2e2e2e;
+
+header{
+    nav{
+        @media screen and (max-width: 992px) {
+            transform: translateX(0px);
+            left: 20px;
+            right: 20px;
+        }
+        position: absolute;
+        top: 20px;
+        z-index: 9;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .logo{
+            float: left;
+            @media screen and (max-width: 768px) {
+                width: 100px;
+            }
+        }
+        .mobile-button{
+            display: none;
+            float: right;
+            width: 36px;
+            @media screen and (max-width: 768px) {
+                width: 30px;
+            }
+            div{
+                height: 4px;
+                background: white;
+                margin: 6px 0px;
+                transition: all 0.4s ease;
+            }
+        }
+        .desktop-nav{
+            display: inline-block;
+            list-style: none;
+            padding: 0;
+            float: right;
+            li{
+                display: inline-block;
+                padding: 10px 20px;
+                a{
+                    color: white;
+                }
+            }
+        }
+        .mobile-nav{
+            display: none;
+            list-style: none;
+            padding: 0;
+            width: 100%;
+            position: absolute;
+            top: 70px;
+            li{
+                padding: 10px 20px;
+                margin: 0px 30px;
+                a{
+                    color: white;
+                }
+            }
+        }
+        @media screen and (max-width: 992px) {
+            .desktop-nav{
+                display: none;
+            }
+            .mobile-button{
+                display: block;
+            }
+        }
+
+    }
+}
+footer{
+    background-color: $secondary-color;
+    padding: 70px 0px;
+    color: white;
+    .logo-footer{
+        margin-bottom: 20px;
+        @media screen and (max-width: 768px) {
+            width: 100px;
+        }
+    }
+    .social{
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        .separator{
+            display: inline-block;
+            height: 30px;
+            width: 2px;
+            background-color: white;
+            margin: 0px 20px;
+            vertical-align: middle;
+        }
+        i{
+            margin: 0px 15px;
+            font-size: 22px;
+        }
+    }
+}
+
+.rotate-right{
+    transform: translate(0px, 10px) rotate( 45deg);
+}
+.rotate-left{
+    transform: translate(0px, 0px) rotate( -45deg);
+}
+.hidden{
+    opacity: 0;
+}
+
+@import "partials/home";
+@import "partials/swiper"
