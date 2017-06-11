@@ -7,7 +7,7 @@ header{
         top: 90px;
         left: 0;
         right: 0;
-        height: 1px;
+        height: 2px;
         background-color: #fff;
         z-index: 9;
     }
@@ -85,8 +85,17 @@ header{
 }
 footer{
     background-color: $secondary-color;
-    padding: 70px 0px;
+    padding: 70px 0px 10px 0px;
     color: white;
+    position: relative;
+    .line{
+        position: absolute;
+        bottom: 40px;
+        left: 0px;
+        right: 0px;
+        height: 2px;
+        background-color: #333333;
+    }
     .logo-footer{
         margin-bottom: 20px;
         @media screen and (max-width: 768px) {
@@ -94,6 +103,7 @@ footer{
         }
     }
     .social{
+        margin-bottom: 30px;
         a{
             color: white;
             text-decoration: none;
